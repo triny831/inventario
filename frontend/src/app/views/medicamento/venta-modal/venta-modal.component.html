@@ -1,0 +1,26 @@
+<mat-dialog-content>
+  <div>
+    <h2>Vender Medicamento</h2>
+</div>
+  <mat-form-field appearance="outline">
+    <mat-label>Cantidad</mat-label>
+    <input
+      matInput
+      placeholder="Cantidad a vender"
+      [(ngModel)]="ventas.cantidad"
+      (ngModelChange)="calcValorTotal()"
+    />
+  </mat-form-field>
+  <div class="valor">
+    <h2>Valor unitario</h2>
+    <p><strong>$</strong>{{ ventas.valorU }}</p>
+  </div>
+  <div class="valor2">
+    <h2>Usted pagara</h2>
+    <p><strong>$</strong>{{ ventas.valorT }}</p>
+  </div>
+  <div style="float: right;">
+    <button style="background-color: rgb(173, 167, 210); margin-right: 5px;" (click)="guardar()">Vender</button>
+    <button style="background-color: rgb(230, 116, 139);" (click)="cancelar()">Cancelar</button>
+  </div>
+</mat-dialog-content>

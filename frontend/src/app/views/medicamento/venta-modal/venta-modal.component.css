@@ -1,0 +1,22 @@
+.card{
+    display: flex;
+    justify-content: space-between
+    ;
+    width: 100%;
+    height: 100%;
+}
+.valor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center ;
+}
+.valor2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center ;
+}
+h2{
+    margin-right: 1rem;
+}

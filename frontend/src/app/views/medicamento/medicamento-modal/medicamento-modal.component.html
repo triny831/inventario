@@ -1,0 +1,53 @@
+<mat-dialog-content>
+  <div>
+    <h2>Nuevo Medicamento</h2>
+</div>
+  <mat-form-field appearance="outline" style="margin-left: 3px;">
+    <mat-label>Nombre de medicamento</mat-label>
+    <input
+      matInput
+      placeholder="Nombre de medicamento"
+      [(ngModel)]="medicamento.nombre"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline" style="margin-left: 3px;">
+    <mat-label>Laboratorio de fabricacion</mat-label>
+    <input
+      matInput
+      placeholder="Laboratorio de fabricacion"
+      [(ngModel)]="medicamento.laboratorio"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline" style="margin-left: 3px;">
+    <mat-label>Fecha de fabricacion</mat-label>
+    <input
+      matInput
+      placeholder="Fecha de fabricacion"
+      [(ngModel)]="medicamento.fechaF"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline" style="margin-left: 3px;">
+    <mat-label>Fecha de vencimiento</mat-label>
+    <input
+      matInput
+      placeholder="Fecha de vencimiento"
+      [(ngModel)]="medicamento.fechaV"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline" style="margin-left: 3px;">
+    <mat-label>Stock</mat-label>
+    <input matInput placeholder="Stock" [(ngModel)]="medicamento.stock" />
+  </mat-form-field>
+  <mat-form-field appearance="outline" style="margin-left: 3px;">
+    <mat-label>Valor unitario</mat-label>
+    <input
+      matInput
+      placeholder="Valor unitario"
+      [(ngModel)]="medicamento.valorU"
+    />
+  </mat-form-field>
+  <div style="float: right;">
+    <button style="background-color: rgb(173, 167, 210); margin-right: 5px;"  (click)="actualizar()">Guardar</button>
+    <button  style="background-color: rgb(230, 116, 139);" (click)="cancelar()">Cancelar</button>
+  </div>
+</mat-dialog-content>

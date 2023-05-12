@@ -1,0 +1,59 @@
+
+<!-- <div class="row">
+  <div class="col-6">
+    <mat-form-field style="margin-top: 2rem; width: 300px; margin-left: 200px;" appearance="outline">
+      <mat-label>Fecha</mat-label>
+      <input
+      matInput
+      [(ngModel)]="fecha"
+      placeholder="Fecha"
+      #input
+      />
+    </mat-form-field>
+  </div>
+  <div class="col-6" style="text-align: center; margin-top: 35px;">
+    <button 
+    (click)="filtrarFecha()" style="background-color: burlywood; height: 50px;">
+      Buscar Venta
+    </button>
+  </div>
+</div> -->
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="idVenta">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+      <td mat-cell *matCellDef="let row">{{ row.idVenta }}</td>
+    </ng-container>
+    <ng-container matColumnDef="fecha">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha y hora</th>
+      <td mat-cell *matCellDef="let row">{{ row.fechaYHora }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="medicamento">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Medicamento</th>
+      <td mat-cell *matCellDef="let row">{{ row.nombreM }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cantidad">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Cantidad</th>
+      <td mat-cell *matCellDef="let row">{{ row.cantidad }}</td>
+    </ng-container>
+    <ng-container matColumnDef="valorU">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Valor unitario</th>
+      <td mat-cell *matCellDef="let row">{{ row.valorU }}</td>
+    </ng-container>
+    <ng-container matColumnDef="valorT">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Valor total</th>
+      <td mat-cell *matCellDef="let row">{{ row.valorT }}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[3, 10, 20]"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements"
+  >
+  </mat-paginator>
+</div>
